@@ -9,7 +9,7 @@ export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
       { title: "Dashboard — Verix" },
-      { name: "description", content: "Your Verix Data Passport cockpit. Monitor identity score, vault, and active permissions." },
+      { name: "description", content: "Your Verix Data Passport cockpit on Algorand. Monitor identity score, vault, and active permissions." },
     ],
   }),
   component: Dashboard,
@@ -60,7 +60,7 @@ function Header() {
         <h1 className="font-display font-bold text-4xl md:text-5xl leading-none">
           gm, <span className="text-holo">{loading ? '@you' : data?.name ?? '@guest'}</span>
         </h1>
-        <p className="text-sm text-muted-foreground mt-1 font-mono">{loading ? 'connecting…' : (data?.email ?? 'mainnet · live')}</p>
+        <p className="text-sm text-muted-foreground mt-1 font-mono">{loading ? 'connecting…' : (data?.email ?? 'Algorand · mainnet')}</p>
       </div>
       <div className="flex items-center gap-2">
         <button className="px-4 py-2.5 rounded-xl glass-strong font-mono text-xs uppercase tracking-widest hover:bg-white/10 transition">+ add credential</button>
@@ -179,11 +179,11 @@ function Legend({ c, l, v }: { c: string; l: string; v: string }) {
 
 function CredentialVault() {
   const creds = [
-    { t: "ENS Domain", v: "nova.eth", tag: "wallet", c: "var(--electric)" },
+    { t: "NFD · .algo", v: "nova.algo", tag: "wallet", c: "var(--electric)" },
     { t: "MIT · Computer Science", v: "Class of '24", tag: "education", c: "var(--lime)" },
     { t: "Aragon DAO", v: "Council member · since 2023", tag: "dao", c: "var(--neon)" },
-    { t: "Gitcoin Passport", v: "Stamps · 12", tag: "reputation", c: "var(--hot)" },
-    { t: "Farcaster", v: "@nova · 12.4k followers", tag: "social", c: "var(--electric)" },
+    { t: "Algorand Reputation", v: "Stamps · 12", tag: "reputation", c: "var(--hot)" },
+    { t: "NFD Profile", v: "@nova.algo · verified", tag: "social", c: "var(--electric)" },
   ];
   return (
     <Panel kicker="vault · 5 items" title="Credential vault">
@@ -206,14 +206,14 @@ function CredentialVault() {
 
 function ConnectedApps() {
   const apps = [
-    { n: "Farcaster", s: "Active", c: "var(--neon)" },
-    { n: "Snapshot", s: "Active", c: "var(--electric)" },
-    { n: "Gitcoin", s: "Active", c: "var(--lime)" },
-    { n: "ETHGlobal", s: "Idle", c: "var(--hot)" },
-    { n: "Lens", s: "Active", c: "var(--electric)" },
-    { n: "POAP", s: "Active", c: "var(--lime)" },
-    { n: "Aragon", s: "Active", c: "var(--neon)" },
-    { n: "Mirror", s: "Idle", c: "var(--electric)" },
+    { n: "Pera Wallet", s: "Active", c: "var(--neon)" },
+    { n: "Defly", s: "Active", c: "var(--electric)" },
+    { n: "NFD", s: "Active", c: "var(--lime)" },
+    { n: "Algorand Hack Series", s: "Idle", c: "var(--hot)" },
+    { n: "Folks Finance", s: "Active", c: "var(--electric)" },
+    { n: "Tinyman", s: "Active", c: "var(--lime)" },
+    { n: "Gov Algo", s: "Active", c: "var(--neon)" },
+    { n: "AlgoDeFi", s: "Idle", c: "var(--electric)" },
   ];
   return (
     <Panel kicker="320 integrations" title="Connected apps">
@@ -232,10 +232,10 @@ function ConnectedApps() {
 
 function VerificationRequests() {
   const [reqs, setReqs] = useState([
-    { app: "Farcaster", scope: "age · 18+", c: "var(--neon)" },
-    { app: "Snapshot", scope: "DAO membership", c: "var(--electric)" },
-    { app: "ETHGlobal", scope: "POAP history", c: "var(--lime)" },
-    { app: "Lens", scope: "verified social", c: "var(--hot)" },
+    { app: "Pera Wallet", scope: "wallet · linked", c: "var(--neon)" },
+    { app: "Gov Algo", scope: "DAO membership", c: "var(--electric)" },
+    { app: "Algorand Hack Series", scope: "hackathon badges", c: "var(--lime)" },
+    { app: "NFD", scope: "verified .algo", c: "var(--hot)" },
   ]);
   function decide(i: number) {
     setReqs((r) => r.filter((_, idx) => idx !== i));
@@ -278,10 +278,10 @@ function VerificationRequests() {
 
 function ActivePermissions() {
   const perms = [
-    { app: "Farcaster", exp: "7d", c: "var(--neon)" },
-    { app: "Snapshot", exp: "30d", c: "var(--electric)" },
-    { app: "Gitcoin", exp: "∞", c: "var(--lime)" },
-    { app: "Mirror", exp: "1d", c: "var(--hot)" },
+    { app: "Pera Wallet", exp: "7d", c: "var(--neon)" },
+    { app: "NFD", exp: "30d", c: "var(--electric)" },
+    { app: "Algorand Hack Series", exp: "∞", c: "var(--lime)" },
+    { app: "Folks Finance", exp: "1d", c: "var(--hot)" },
   ];
   return (
     <Panel kicker="active · 4" title="Permissions">

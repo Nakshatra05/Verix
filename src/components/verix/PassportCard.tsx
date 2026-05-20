@@ -27,7 +27,7 @@ export function PassportCard({ className = "", rotate = "0deg", variant = "purpl
             <div className="h-8 w-8 rounded-lg holo" />
             <div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">data passport</div>
-              <div className="font-display font-bold leading-tight">@nova.eth</div>
+              <div className="font-display font-bold leading-tight">@nova.algo</div>
             </div>
           </div>
           <span className="chip glow-lime !text-lime">verified</span>
@@ -37,14 +37,14 @@ export function PassportCard({ className = "", rotate = "0deg", variant = "purpl
         <div className="mt-4 rounded-xl bg-black/30 border border-white/10 p-3 font-mono text-xs">
           <div className="text-muted-foreground text-[10px] uppercase mb-1">wallet</div>
           <div className="flex items-center justify-between">
-            <span className="truncate">0x9f3a…2eC4</span>
+            <span className="truncate">NOVA…2E4K</span>
             <span className="text-lime">●</span>
           </div>
         </div>
 
         {/* badges */}
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {["ETHGlobal", "Gitcoin", "ZK Pro", "DAO×3", "ENS"].map((b, i) => (
+          {["Algorand Hack Series", "Pera", "ZK Pro", "DAO×3", ".algo"].map((b, i) => (
             <span
               key={b}
               className="chip"
@@ -89,7 +89,7 @@ export function PassportCard({ className = "", rotate = "0deg", variant = "purpl
         </div>
 
         <div className="mt-4 flex items-center justify-between font-mono text-[10px] text-muted-foreground">
-          <span>VRX·ID 0xA1.92F</span>
+          <span>VRX·ID ALGO·A1.92F</span>
           <span className="text-lime">●  live</span>
         </div>
       </div>

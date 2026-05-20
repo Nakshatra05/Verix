@@ -45,7 +45,7 @@ function Hero() {
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 chip glow-neon mb-6">
             <span className="h-1.5 w-1.5 rounded-full bg-lime animate-pulse-glow" />
-            <span>v1.0 · live on mainnet</span>
+            <span>v1.0 · Algorand native</span>
           </div>
           <h1 className="font-display font-bold text-[clamp(2.6rem,8vw,6.5rem)] leading-[0.92] tracking-tight">
             Your Identity. <br />
@@ -53,7 +53,7 @@ function Hero() {
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl">
             Verix is the decentralized <span className="text-foreground">Data Passport</span> —
-            own, manage, and selectively share your credentials across Web2 and Web3.
+            own, manage, and selectively share your credentials on Algorand and beyond.
             One identity. Zero gatekeepers.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -121,7 +121,7 @@ function PassportPreview() {
           </div>
           <div className="lg:col-span-6 space-y-4">
             {[
-              { t: "Wallet & on-chain history", d: "ENS, multiple wallets, transaction reputation — unified.", c: "var(--electric)" },
+              { t: "Wallet & on-chain history", d: "NFD .algo names, Pera/Defly wallets, ASA history — unified.", c: "var(--electric)" },
               { t: "Verified socials", d: "Farcaster, X, GitHub linked via cryptographic proofs.", c: "var(--neon)" },
               { t: "Education credentials", d: "Universities issue tamper-proof diplomas to your passport.", c: "var(--lime)" },
               { t: "DAO memberships", d: "Roles, voting power, contribution history across DAOs.", c: "var(--hot)" },
@@ -262,10 +262,10 @@ function Privacy() {
 /* ----------------------- USE CASES ----------------------- */
 function UseCases() {
   const cases = [
-    { t: "Hackathons", d: "Prove past wins, skills, and ETHGlobal POAPs in one tap.", emoji: "⌘", c: "var(--neon)" },
+    { t: "Hackathons", d: "Prove past wins, skills, and Algorand Hack Series badges in one tap.", emoji: "⌘", c: "var(--neon)" },
     { t: "DAOs", d: "Portable voting reputation across every governance forum.", emoji: "✦", c: "var(--electric)" },
     { t: "Creator Economy", d: "Carry your audience graph between platforms.", emoji: "♪", c: "var(--lime)" },
-    { t: "Web3 Social", d: "Verified followers, no bots, real signal.", emoji: "❍", c: "var(--hot)" },
+    { t: "Algo Social", d: "Verified followers on Algorand-native social layers.", emoji: "❍", c: "var(--hot)" },
     { t: "Education", d: "Universities sign diplomas directly to your passport.", emoji: "▲", c: "var(--electric)" },
   ];
   return (
@@ -316,7 +316,7 @@ function UseCases() {
               </div>
             </div>
             <div className="relative flex flex-wrap gap-2">
-              {["Farcaster","ETHGlobal","Snapshot","Lens","Gitcoin","Aragon","POAP"].map((x) => (
+              {["Pera","Defly","NFD","Algorand Hack Series","Folks","Gov Algo","Tinyman"].map((x) => (
                 <span key={x} className="chip">{x}</span>
               ))}
             </div>
@@ -379,7 +379,7 @@ function DashboardPreviewMini() {
       </div>
       <div className="col-span-4 glass rounded-xl p-3 space-y-2">
         <div className="font-mono text-[10px] text-muted-foreground uppercase">recent requests</div>
-        {["Farcaster · age","Snapshot · DAO","ETHGlobal · POAP"].map((r) => (
+        {["Pera · wallet","Gov Algo · DAO","Algorand Hack Series · badges"].map((r) => (
           <div key={r} className="flex items-center justify-between rounded-md bg-white/5 px-2 py-1.5">
             <span className="truncate">{r}</span>
             <span className="h-1.5 w-1.5 rounded-full bg-lime" />
@@ -389,7 +389,7 @@ function DashboardPreviewMini() {
       <div className="col-span-7 glass rounded-xl p-3">
         <div className="font-mono text-[10px] text-muted-foreground uppercase mb-2">connected apps</div>
         <div className="grid grid-cols-6 gap-2">
-          {["FC","LE","SN","GC","PO","AR"].map((x, i) => (
+          {["PR","DF","NFD","AH","GV","TN"].map((x, i) => (
             <div key={i} className="aspect-square rounded-lg glass-strong flex items-center justify-center font-display font-bold">{x}</div>
           ))}
         </div>
@@ -397,7 +397,7 @@ function DashboardPreviewMini() {
       <div className="col-span-5 glass rounded-xl p-3">
         <div className="font-mono text-[10px] text-muted-foreground uppercase mb-2">credential vault</div>
         <div className="space-y-2">
-          {["ENS · nova.eth","MIT · CS '24","Gitcoin · GR20"].map((x) => (
+          {[".algo · nova.algo","MIT · CS '24","Algorand Hack Series · '25"].map((x) => (
             <div key={x} className="rounded-md bg-white/5 px-2 py-1.5 flex items-center justify-between">
               <span>{x}</span><span className="text-lime">●</span>
             </div>

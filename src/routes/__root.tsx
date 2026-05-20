@@ -54,7 +54,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Verix — Your Identity. Your Control." },
-      { name: "description", content: "Verix is the decentralized Data Passport. Own, manage, and selectively share your identity across Web2 and Web3." },
+      { name: "description", content: "Verix is the decentralized Data Passport for Algorand. Own, manage, and selectively share your identity with native wallet and .algo support." },
       { name: "author", content: "Verix" },
       { property: "og:title", content: "Verix — Your Identity. Your Control." },
       { property: "og:description", content: "The decentralized Data Passport for the open internet." },

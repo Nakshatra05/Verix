@@ -21,6 +21,9 @@ export function Nav() {
             <Link to="/dashboard" className="px-3 py-2 rounded-lg hover:bg-white/5 transition">dashboard</Link>
           </div>
           <div className="flex items-center gap-2">
+            <span className="hidden lg:inline-flex chip text-[10px] font-mono uppercase tracking-widest border-lime/40 text-lime">
+              Algorand native
+            </span>
             <Link
               to="/dashboard"
               className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-lime text-[oklch(0.16_0.025_280)] font-display font-semibold text-sm hover:scale-[1.03] active:scale-95 transition glow-lime"

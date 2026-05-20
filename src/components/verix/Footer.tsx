@@ -5,7 +5,7 @@ export function Footer() {
         <div className="flex whitespace-nowrap animate-tape py-3 font-display font-bold text-2xl">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex items-center gap-8 px-8 shrink-0">
-              {["VERIX", "★", "YOUR IDENTITY", "★", "YOUR CONTROL", "★", "BUILT FOR THE OPEN INTERNET", "★", "VERIX", "★", "DATA PASSPORT", "★"].map((t, j) => (
+              {["VERIX", "★", "YOUR IDENTITY", "★", "YOUR CONTROL", "★", "ALGORAND NATIVE", "★", "VERIX", "★", "DATA PASSPORT", "★"].map((t, j) => (
                 <span key={j}>{t}</span>
               ))}
             </div>
@@ -39,7 +39,7 @@ export function Footer() {
       </div>
       <div className="max-w-7xl mx-auto px-6 pb-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs font-mono text-muted-foreground">
         <span>© 2026 Verix Labs · made on the open internet</span>
-        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-lime animate-pulse-glow" /> mainnet · stable</span>
+        <span className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-lime animate-pulse-glow" /> Algorand · mainnet</span>
       </div>
     </footer>
   );
